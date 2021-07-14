@@ -9,28 +9,28 @@ function MakeArray(n) {
 
 //Initialize Days of Week Array
 days = new MakeArray(7);
-days[0] = "Saturday"
-days[1] = "Sunday"
-days[2] = "Monday"
-days[3] = "Tuesday"
-days[4] = "Wednesday"
-days[5] = "Thursday"
-days[6] = "Friday"
+days[0] = "Sábado"
+days[1] = "Domingo"
+days[2] = "Segunda-feira"
+days[3] = "Terça-feira"
+days[4] = "Quarta-feira"
+days[5] = "Quinta-feira"
+days[6] = "Sexta-feita"
 
 //Initialize Months Array
 months = new MakeArray(12);
-months[1] = "January"
-months[2] = "February"
-months[3] = "March"
-months[4] = "April"
-months[5] = "May"
-months[6] = "June"
-months[7] = "July"
-months[8] = "August"
-months[9] = "September"
-months[10] = "October"
-months[11] = "November"
-months[12] = "December"
+months[1] = "Janeiro"
+months[2] = "Fevereiro"
+months[3] = "Março"
+months[4] = "Abril"
+months[5] = "Maio"
+months[6] = "Junio"
+months[7] = "Julio"
+months[8] = "Agosto"
+months[9] = "Setembro"
+months[10] = "Outubro"
+months[11] = "Novembro"
+months[12] = "Dezembro"
 
 
 //Day of Week Function
@@ -44,16 +44,16 @@ function compute(form) {
   var val1 = parseInt(form.day.value, 10)
 
   if ((val1 < 0) || (val1 > 31)) {
-    alert("Invalid Day, can't be greater than 31 😑😑")
+    alert("Dia inválido. O dia precisa ser menor ou igual a 31 😑😑")
   }
   var val2 = parseInt(form.month.value, 10)
   if ((val2 < 0) || (val2 > 12)) {
-    alert("Invalid month, can't be greater than 12 😑😑")
+    alert("Mês inválido. O mês deve ser menor ou igual a 12 😑😑")
   }
   var val2x = parseInt(form.month.value, 10)
   var val3 = parseInt(form.year.value, 10)
   if (val3 < 1000) {
-    alert("You ought to be dead dude! 👎👻")
+    alert("Pela idade, já era pra estar morto! 👎👻")
   }
   if (val2 == 1) {
     val2x = 13;
@@ -70,8 +70,8 @@ function compute(form) {
   var val8 = val1 + (val2x * 2) + val4 + val3 + val5 - val6 + val7 + 2
   var val9 = parseInt(val8 / 7, 10)
   var val0 = val8 - (val9 * 7)
-  form.result1.value = months[val2] + " " + form.day.value + ", " + form.year.value
-  form.result2.value = "Hurray!! You were born on " + days[val0]
+  form.result1.value = form.day.value + " de " +months[val2] + " de " +  form.year.value
+  form.result2.value = "Você nasceu na(o) " + days[val0]
 }
 
          // end script -->
